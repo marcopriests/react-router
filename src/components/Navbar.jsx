@@ -21,9 +21,9 @@ const links = [
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
             <div className="container-fluid">
-                <div className="col-1 p-2">
+                <div className="logo me-5">
                     <img src='public/duck.png' className="navbar-brand img-fluid" href="#" />
                 </div>
 
