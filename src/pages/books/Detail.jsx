@@ -4,7 +4,6 @@ import Navbar from '../../components/Navbar'
 const Detail = () => {
     return (
         <>
-            <Navbar />
             <div className='container p-5'>
                 <div className='d-flex justify-content-between mb-3'>
                     <div className="col-4 p-3">

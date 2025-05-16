@@ -20,7 +20,6 @@ const Books = () => {
 
     return (
         <div>
-            <Navbar />
             <div className="container-fluid p-5">
                 <h1>Books</h1>
                 {!state

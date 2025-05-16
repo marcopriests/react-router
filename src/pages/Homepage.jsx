@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 const Homepage = () => {
     return (
         <div>
-            <Navbar />
             <div className="container-fluid p-5">
                 <h1>Homepage</h1>
 
