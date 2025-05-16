@@ -21,16 +21,18 @@ const links = [
 
 const Navbar = () => {
     return (
-        <nav className='d-flex align-items-center justify-content-between p-4'>
-            <div className='col-2'>
-                <img className='img-fluid' src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" alt="" />
-            </div>
-            <div className="col-10 d-flex justify-content-end">
-                <ul className='list-style-unstyle'>
-                    <li><NavLink to='/'>Homepage</NavLink></li>
-                    <li><NavLink to='/about'>About</NavLink></li>
-                    <li><NavLink to='/characters'>Vharacters</NavLink></li>
-                </ul>
+        <nav className='bg-body-tertiary'>
+            <div className="d-flex align-items-center p-5">
+                <div className='col-2'>
+                    <img className='img-fluid' src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" alt="" />
+                </div>
+                <div className="col-10 d-flex justify-content-end">
+                    <ul className='nav'>
+                        {links.map(link => {
+                            return <li className='nav-item ms-3' key={link.id}><NavLink className='text-decoration-none text-success fw-semibold' to={link.route}>{link.name}</NavLink></li>
+                        })}
+                    </ul>
+                </div>
             </div>
         </nav>
     )
