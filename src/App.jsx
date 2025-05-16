@@ -13,8 +13,10 @@ function App() {
         <Route Component={DefaultLayout}>
           <Route path="/" Component={Homepage} />
           <Route path="/about" Component={About} />
-          <Route path="/books" Component={Books} />
-          <Route path="/books/:id" Component={Detail} />
+          <Route path="/books">
+            <Route index Component={Books} />
+            <Route path=":id" Component={Detail} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

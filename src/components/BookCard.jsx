@@ -16,7 +16,7 @@ const BookCard = ({ book }) => {
                             <p className="fst-italic text-secondary mb-3">{book.releaseDate}</p>
                         </div>
                         <div>
-                            <NavLink to='/detail' className='btn btn-outline-danger'>Vai al dettaglio</NavLink>
+                            <NavLink to={`/books/${book.index}`} className='btn btn-outline-danger'>Vai al dettaglio</NavLink>
                         </div>
                     </div>
 
