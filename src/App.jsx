@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Homepage from "./pages/Homepage"
 import About from "./pages/About"
-import Characters from "./pages/Characters"
+import Books from "./pages/books/Books"
+import Detail from "./pages/books/Detail"
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
       <Routes>
         <Route path="/" Component={Homepage} />
         <Route path="/about" Component={About} />
-        <Route path="/characters" Component={Characters} />
+        <Route path="/books" Component={Books} />
+        <Route path="/detail" Component={Detail} />
       </Routes>
     </BrowserRouter>
   )

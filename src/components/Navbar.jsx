@@ -15,21 +15,26 @@ const links = [
     },
     {
         id: 3,
-        name: 'Characters',
-        route: '/characters'
+        name: 'Books',
+        route: '/books'
     }]
 
 const Navbar = () => {
     return (
-        <nav className='bg-body-tertiary'>
-            <div className="d-flex align-items-center p-5">
-                <div className='col-2'>
-                    <img className='img-fluid' src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" alt="" />
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <div className="container-fluid">
+                <div className="col-1 p-2">
+                    <img src='public/duck.png' className="navbar-brand img-fluid" href="#" />
                 </div>
-                <div className="col-10 d-flex justify-content-end">
-                    <ul className='nav'>
+
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         {links.map(link => {
-                            return <li className='nav-item ms-3' key={link.id}><NavLink className='text-decoration-none text-success fw-semibold' to={link.route}>{link.name}</NavLink></li>
+                            return <li className='nav-item' key={link.id}><NavLink className='nav-link' to={link.route}>{link.name}</NavLink></li>
                         })}
                     </ul>
                 </div>
